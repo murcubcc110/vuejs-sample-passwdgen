@@ -29,7 +29,7 @@ export default defineComponent({
         const useSymbols = ref('no');
         const useNubbers = ref('yes');
 
-        function generatePassword() {
+        function generatePassword(): void {
             const length = passwordLength.value;
             const symbols = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
             const letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -47,8 +47,6 @@ export default defineComponent({
                 for (let i = 0; i < length; i++) {
                     result += characters.charAt(Math.floor(Math.random() * characters.length));
                 }
-                console.log(result.search(`[${numbers}]+`));
-                console.log(result.search(`[${symbols}]+`));
             } while (
                 (useNubbers.value === 'yes' && result.search(`[${numbers}]+`) < 0)
                 ||
