@@ -47,10 +47,6 @@ export default defineComponent({
             reloadKey
         };
     }
-    // beforeUpdate(): void {
-    //     console.log(this.stockValue)
-    //     this.newTodo = ref(this.stockValue)
-    // }
 });
 </script>
 
