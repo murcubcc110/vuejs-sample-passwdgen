@@ -9,7 +9,7 @@
         <button @click="generatePassword" :disabled="checkGenButton">パスワード生成</button>
         <br />
         <p v-if="checkGenButton">＊パスワード桁数は６文字以上</p>
-        <StackList v-else :stockValue="password"/>
+        <StackList v-else :stockValue="password" />
     </div>
 </template>
 

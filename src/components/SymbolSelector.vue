@@ -15,23 +15,23 @@
 </template>
 
 <script lang="ts">
-import { Ref, defineComponent, ref, watch ,computed} from 'vue';
+import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
-    props : ({
+    props: ({
         id: { type: String, required: true },
         value: { type: String, default: "yes" },
-    }),    
-    setup(props, ctx ) {
+    }),
+    setup(props, ctx) {
         const id = ref(props.id);
         const value = ref(props.value);
         const selected = ref(0);
 
         function onClickRadio(e: string): void {
-            ctx.emit("symbol-update",e);
+            ctx.emit("symbol-update", e);
         }
 
-         return {
+        return {
             id,
             value,
             selected,

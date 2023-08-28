@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref ,watch} from 'vue';
+import { defineComponent, ref, watch } from 'vue';
 
 export default defineComponent({
     props: ({
@@ -54,13 +54,13 @@ export default defineComponent({
 button {
     color: #fff;
     background-color: #eb6100;
-    font-size:0.5em;
+    font-size: 0.5em;
 }
 
 .button-small {
     color: #fff;
     background-color: #eb6100;
-    font-size:0.2em;
+    font-size: 0.2em;
 }
 
 li {
